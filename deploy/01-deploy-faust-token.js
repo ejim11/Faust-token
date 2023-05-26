@@ -9,7 +9,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   const faustTokenContract = await deploy("FaustToken", {
     from: deployer,
     log: true,
-    waitConfirmation: network.config.blockConfirmation || 1,
+    waitConfirmation: network.config.blockConfirmation || 5,
   });
 
   log("Contract deployed");
@@ -20,3 +20,6 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     await verify(faustTokenContract.address);
   }
 };
+
+
+// 0x040420812e2f5BF171697A55850c7638DD6A252B

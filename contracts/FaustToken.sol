@@ -7,7 +7,7 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 contract FaustToken is ERC20 {
-    uint constant _initialSupply = 10 * (10 ** 18);
+    uint constant _initialSupply = 100000 * (10 ** 18);
 
     constructor() ERC20("Faust", "FST") {
         _mint(msg.sender, _initialSupply);
